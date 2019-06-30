@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">                                                      
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container" >
+  <div class="mx-auto w-50 h-50 m-5 pb-5 p-xl-5">
+    
+  <div class="card">
+    <div class="card-body">
+      
+  <h1 class="display-4 text-center " style="font-size-adjust: 50px;">S'MART</h1>
+
+
+  <p class="text-center">LOGIN</p>
+
+  
+  <form action="/action_page.php" class="needs-validation" novalidate>
+
+    <div class="form-group ">
+      <label for="email">Email:</label>
+      <div class="input-group ">
+       
+          
+      <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required >
+       <div class="input-group-append ">
+        <span class="input-group-text " >@example.com
+
+        </span></div>
+
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Enter correct email</div>
+    
+</div>
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter your password" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+
+
+     
+    <div class=" p-xl-5">
+    <center><button type="submit" class="btn btn-primary">LOGIN</button>
+  </center></div>
+
+
+  </form>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+</body>
+</html>
